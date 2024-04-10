@@ -4,6 +4,8 @@ let menuList = document.querySelector('.menu-list');
 let menuBtnDelete = document.querySelector('.menu-btn-delete');
 
 let container = document.querySelector('.container');
+let mainImg = document.querySelector('.main-img');
+let images = document.querySelectorAll('.images img');
 
 let plusBtn = document.querySelector('.plus-btn');
 let minusBtn = document.querySelector('.minus-btn');
@@ -32,6 +34,7 @@ addBtn.addEventListener('click', () => {
         if( btnText.innerText > 0){
             sup.innerText = btnText.innerText;
         sup.style.display = 'flex';
+        btnText.innerText = 0;
         }   
 })
 
@@ -52,18 +55,28 @@ cartBtn.addEventListener('click', () => {
 })
 
 deleteBtn.addEventListener('click', () => {
-  location.reload()
-    // cartMain.style.display = 'none';
-    // checkoutBtn.style.display = 'none';
-    // sup.style.display = 'none';
+  // location.reload()
+    cartMain.style.display = 'none';
+    checkoutBtn.style.display = 'none';
+    sup.style.display = 'none';
+    sup.innerText = '';
 })
 
 menuBtn.addEventListener('click', () => {
   menuList.classList.add('active');
   container.style.opacity = '0.5'
+  container.style.backgroundColor = 'black'
   
 })
 menuBtnDelete.addEventListener('click', () => {
   menuList.classList.remove('active')
-  container.style.opacity = '1'
+  container.style.opacity = '1';
+  container.style.backgroundColor = 'white'
+})
+
+images.forEach((v, i) => {
+  v.addEventListener('click', (e) => {
+  mainImg.src = `images/Rectanglerasm${i}.jpg`;
+   
+  })
 })

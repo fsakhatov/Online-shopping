@@ -64,12 +64,13 @@ nav span button:nth-child(2):hover{
     border: 2px solid #FF7E1B;
 }
 .menu-list{
+    padding-left: 30px;
     height: 100vh;
     z-index: 5;
     background-color: white;
     top: 30px;
     position: absolute;
-    left: 5%;
+    left: 0;
     width: 50%;
     list-style: none;
     display: none;
@@ -328,6 +329,17 @@ button{
 .span-2 footer .add-btn:hover{
     opacity: 0.5;
     transition: 0.5;
+}
+.main-img{
+    object-fit: cover;
+    object-position: center;
+}
+.active-img{
+    opacity: 0.7;
+    border: 3px solid #FF7E1B;
+    border-radius: 20px;
+    transition: 0.3s;
+    transform: scale(1.1);
 }
 @media(max-width:1000px){
     main{
