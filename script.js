@@ -1,4 +1,9 @@
 let cartBtn = document.querySelector('.cart-btn');
+let menuBtn = document.querySelector('.menu-btn');
+let menuList = document.querySelector('.menu-list');
+let menuBtnDelete = document.querySelector('.menu-btn-delete');
+
+let container = document.querySelector('.container');
 
 let plusBtn = document.querySelector('.plus-btn');
 let minusBtn = document.querySelector('.minus-btn');
@@ -32,24 +37,33 @@ addBtn.addEventListener('click', () => {
 
 cartBtn.addEventListener('click', () => {
   if(sup.innerText == 0) {
-    cart.style.display = 'flex'
+    cart.classList.toggle('active')
     cartMain.style.display = 'none';
     checkoutBtn.style.display = 'none';
   }
   else{
-    cart.style.display = 'flex'
+   cart.classList.toggle('active')
     cartMain.style.display = 'flex';
-    priceText.innerText += ' ' + sup.innerText;
-    totalPrice.innerText += `$`+(125 * sup.innerText)+'.00'
+    priceText.innerText = `Fall Limited Edition Sneakers $125 x ${sup.innerText}`;
+    totalPrice.innerText = `$`+(125 * sup.innerText)+'.00'
     checkoutBtn.style.display = 'flex';
   }
 
 })
-cartBtn.addEventListener('dblclick', () => {
-    cart.style.display = 'none'
-})
+
 deleteBtn.addEventListener('click', () => {
-    cartMain.style.display = 'none';
-    checkoutBtn.style.display = 'none';
-    sup.style.display = 'none';
+  location.reload()
+    // cartMain.style.display = 'none';
+    // checkoutBtn.style.display = 'none';
+    // sup.style.display = 'none';
+})
+
+menuBtn.addEventListener('click', () => {
+  menuList.classList.add('active');
+  container.style.opacity = '0.5'
+  
+})
+menuBtnDelete.addEventListener('click', () => {
+  menuList.classList.remove('active')
+  container.style.opacity = '1'
 })

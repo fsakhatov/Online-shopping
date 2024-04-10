@@ -63,6 +63,47 @@ nav span button:nth-child(2):hover{
     border-radius: 50%;
     border: 2px solid #FF7E1B;
 }
+.menu-list{
+    height: 100vh;
+    z-index: 5;
+    background-color: white;
+    top: 30px;
+    position: absolute;
+    left: 5%;
+    width: 50%;
+    list-style: none;
+    display: none;
+    align-items: start;
+    /* justify-content: center; */
+    flex-direction: column;
+    gap: 20px;
+}
+.menu-list ul{
+    font-weight: 700;
+    color: #1D2026;
+    gap: 10px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+}
+.menu-list button{
+    width: 50px;
+    background-color: inherit;
+    border: none;
+    height: 25px;
+    font-size: 25px;
+    text-align: start;
+}
+.menu-list ul li{
+    cursor: pointer;
+}
+.menu-list ul li:hover{
+
+    transition: 0.5s ease;
+    transform: scale(1.1);
+}
 .cart-btn{
     position: relative;
 }
@@ -93,6 +134,9 @@ nav span button:nth-child(2):hover{
     height: 200px;
     background-color: white;
     box-shadow: 0px 20px 50px -20px #1D202680;
+}
+.active{
+    display: flex;
 }
 .cart button{
     border: none;
