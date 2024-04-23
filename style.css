@@ -194,7 +194,7 @@ main .span{
 main .main-img{
     width: 445px;
     height: 445px;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 main .images{
     display: flex;
@@ -209,6 +209,9 @@ main .images img:first-child{
 }
 main .images img{
     cursor: pointer;
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
 }
 main .images img:hover{
    opacity: 0.7;
